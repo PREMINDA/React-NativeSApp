@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "SApp",
+    "slug": "SApp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./app/assets/image/icon.png",
+    "splash": {
+      "image": "./app/assets/image/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./app/assets/image/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
