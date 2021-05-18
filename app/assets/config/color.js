@@ -3,4 +3,5 @@ export default {
   secondary: "#4ecdc4",
   black: "#000",
   titletext: "#08c2af",
+  white: "#fff",
 };

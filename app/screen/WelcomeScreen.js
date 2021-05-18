@@ -3,6 +3,7 @@ import { useFonts } from "expo-font";
 import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 
 import color from "../assets/config/color";
+import AppButton from "../components/Button/Button.js";
 
 function WelcomeScreen(props) {
   const [loaded, error] = useFonts({
@@ -24,6 +25,7 @@ function WelcomeScreen(props) {
         />
         <Text style={styles.titletext}>Sell What You Don't Need</Text>
       </View>
+      <AppButton title="Login" onPress={() => console.log("Tapped")} />
       <View style={styles.loginbuttone}></View>
       <View style={styles.registerbuttone}></View>
     </ImageBackground>
