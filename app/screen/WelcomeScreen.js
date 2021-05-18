@@ -2,6 +2,8 @@ import React from "react";
 import { useFonts } from "expo-font";
 import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 
+import color from "../assets/config/color";
+
 function WelcomeScreen(props) {
   const [loaded, error] = useFonts({
     Lobster: require("../assets/fonts/Lobster.ttf"),
@@ -37,12 +39,12 @@ const styles = StyleSheet.create({
   loginbuttone: {
     width: "100%",
     height: 70,
-    backgroundColor: "#fc5c65",
+    backgroundColor: color.primary,
   },
   registerbuttone: {
     width: "100%",
     height: 70,
-    backgroundColor: "#4ecdc4",
+    backgroundColor: color.secondary,
   },
   logo: {
     height: 100,
@@ -58,7 +60,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "500",
     fontFamily: "Lobster",
-    color: "#08c2af",
+    color: color.titletext,
   },
 });
 
