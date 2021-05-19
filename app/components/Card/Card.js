@@ -7,8 +7,9 @@ function Card({ image, title, subtitle }) {
     <View style={styles.card}>
       <Image style={styles.imagecontainer} source={image} />
       <View style={styles.texcontainer}>
-        <Text style={styles.title}>{title}</Text>
-        <Text style={styles.subtitle}>Price : {subtitle}</Text>
+        <View style={styles.seperater}></View>
+        <Text style={styles.title}> {title}</Text>
+        <Text style={styles.subtitle}>Price : {subtitle}$</Text>
       </View>
     </View>
   );
@@ -24,6 +25,11 @@ const styles = StyleSheet.create({
   imagecontainer: {
     width: "100%",
     height: 200,
+  },
+  seperater: {
+    width: "100%",
+    backgroundColor: color.secondary,
+    height: 1,
   },
   texcontainer: {
     padding: 10,
