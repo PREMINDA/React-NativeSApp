@@ -26,8 +26,11 @@ function WelcomeScreen(props) {
         <Text style={styles.titletext}>Sell What You Don't Need</Text>
       </View>
       <AppButton title="Login" onPress={() => console.log("Tapped")} />
-      <View style={styles.loginbuttone}></View>
-      <View style={styles.registerbuttone}></View>
+      <AppButton
+        title="Register"
+        onPress={() => console.log("Tapped")}
+        bgcolor={color.secondary}
+      />
     </ImageBackground>
   );
 }
@@ -37,16 +40,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "flex-end",
     alignItems: "center",
-  },
-  loginbuttone: {
-    width: "100%",
-    height: 70,
-    backgroundColor: color.primary,
-  },
-  registerbuttone: {
-    width: "100%",
-    height: 70,
-    backgroundColor: color.secondary,
   },
   logo: {
     height: 100,
