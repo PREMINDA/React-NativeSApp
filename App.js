@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 import Card from "./app/components/Card/Card";
+import Listitem from "./app/components/Listitem/Listitem";
 import Moredetail from "./app/screen/Moredetail";
 import ViewImageScreen from "./app/screen/ViewImageScreen";
 import WelcomeScreen from "./app/screen/WelcomeScreen";
@@ -10,15 +11,19 @@ import shopdata from "./data.js";
 
 export default function App() {
   console.log(shopdata);
-  return <Moredetail />;
+  return (
+    <View>
+      <Moredetail />
+      <Listitem styles={styles.list} />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
-    justifyContent: "center",
+    width: "100%",
   },
   bgstlyes: {
     backgroundColor: "#f7f7f7",
