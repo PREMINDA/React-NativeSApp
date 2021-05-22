@@ -14,7 +14,6 @@ export default function App() {
   return (
     <View>
       <Moredetail />
-      <Listitem styles={styles.list} />
     </View>
   );
 }

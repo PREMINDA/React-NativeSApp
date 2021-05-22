@@ -1,19 +1,19 @@
 import React from "react";
 import { View, StyleSheet, Image } from "react-native";
 import AppText from "../AppText/AppText";
+import color from "../../assets/config/color";
 
-function Listitem(props) {
+function Listitem({ title, subtitle }) {
   return (
     <View style={styles.container}>
-      <View style={styles.imagecontainer}>
-        <Image
-          style={styles.image}
-          source={require("../../assets/image/asd.jpg")}
-        />
-      </View>
+      <Image
+        style={styles.image}
+        source={require("../../assets/image/asdasd.png")}
+      />
+
       <View style={styles.textcontainer}>
-        <AppText>Preminda Bandara</AppText>
-        <AppText>5% time</AppText>
+        <AppText style={styles.name}>{title}</AppText>
+        <AppText style={styles.time}>{subtitle}</AppText>
       </View>
     </View>
   );
@@ -21,26 +21,30 @@ function Listitem(props) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "gray",
+    backgroundColor: "transparent",
     width: "90%",
     display: "flex",
     flexDirection: "row",
     padding: 5,
     borderRadius: 16,
   },
-  imagecontainer: {
+
+  image: {
     height: 60,
     width: 60,
     borderRadius: 200,
-    overflow: "hidden",
-  },
-  image: {
-    height: "100%",
-    width: "100%",
+    marginRight: 10,
   },
   textcontainer: {
     marginTop: 5,
     marginLeft: 10,
+  },
+  name: {
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+  time: {
+    color: color.mediumgray,
   },
 });
 
