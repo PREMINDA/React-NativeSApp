@@ -3,13 +3,10 @@ import { View, StyleSheet, Image } from "react-native";
 import AppText from "../AppText/AppText";
 import color from "../../assets/config/color";
 
-function Listitem({ title, subtitle }) {
+function Listitem({ title, subtitle, image }) {
   return (
     <View style={styles.container}>
-      <Image
-        style={styles.image}
-        source={require("../../assets/image/asdasd.png")}
-      />
+      <Image style={styles.image} source={image} />
 
       <View style={styles.textcontainer}>
         <AppText style={styles.name}>{title}</AppText>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, StyleSheet, View } from "react-native";
+import { Image, StyleSheet, View, Dimensions } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import color from "../assets/config/color";
@@ -7,8 +7,16 @@ import color from "../assets/config/color";
 function ViewImageScreen(props) {
   return (
     <View style={styles.container}>
-      <View style={styles.button1}></View>
-      <View style={styles.button2}></View>
+      <View style={styles.button1}>
+        <MaterialCommunityIcons name="close" color="white" size={30} />
+      </View>
+      <View style={styles.button2}>
+        <MaterialCommunityIcons
+          name="trash-can-outline"
+          color="white"
+          size={30}
+        />
+      </View>
       <Image
         style={styles.image}
         source={require("../assets/image/chair.jpg")}
@@ -23,25 +31,19 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   button1: {
-    width: 50,
-    height: 50,
-    backgroundColor: color.primary,
     position: "absolute",
     top: 30,
     left: 30,
   },
   button2: {
-    width: 50,
-    height: 50,
-    backgroundColor: color.secondary,
     position: "absolute",
     top: 30,
     right: 30,
   },
   image: {
     width: "100%",
-    height: "100%",
-    resizeMode: "contain",
+    height: Dimensions.get("window").height,
+    resizeMode: "center",
   },
 });
 export default ViewImageScreen;

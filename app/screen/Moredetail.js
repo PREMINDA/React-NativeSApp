@@ -12,10 +12,16 @@ function Moredetail(props) {
         source={require("../assets/image/jacket.jpg")}
       />
       <View style={styles.detailcontainer}>
-        <AppText style={styles.title}>Red jacket for sale</AppText>
-        <AppText style={styles.price}>$100</AppText>
+        <View style={styles.textContainer}>
+          <AppText style={styles.title}>Red jacket for sale</AppText>
+          <AppText style={styles.price}>$100</AppText>
+        </View>
         <View styles={styles.userContainer}>
-          <Listitem title="Preminda Bandara" subtitle="5 time" />
+          <Listitem
+            title="Preminda Bandara"
+            subtitle="5 time"
+            image={require("../assets/image/asdasd.png")}
+          />
         </View>
       </View>
     </View>
@@ -47,6 +53,9 @@ const styles = StyleSheet.create({
     height: 1,
     backgroundColor: color.secondary,
     marginBottom: 2,
+  },
+  textContainer: {
+    marginBottom: 40,
   },
   userContainer: {
     marginVertical: 40,
