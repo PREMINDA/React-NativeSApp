@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 import Card from "./app/components/Card/Card";
+import MessageScree from "./app/screen/MessageScree";
 
 import Moredetail from "./app/screen/Moredetail";
 import ViewImageScreen from "./app/screen/ViewImageScreen";
@@ -13,7 +14,7 @@ export default function App() {
   console.log(shopdata);
   return (
     <View>
-      <ViewImageScreen />
+      <MessageScree />
     </View>
   );
 }
