@@ -1,7 +1,8 @@
 import React from "react";
-import { FlatList, SafeAreaView, StyleSheet } from "react-native";
+import { FlatList, StyleSheet } from "react-native";
 import Listitem from "../components/Listitem/Listitem";
 import Screen from "../components/ScreenComponent/Screen";
+import Seperator from "../components/Seperator/Seperator";
 const messages = [
   {
     id: 1,
@@ -23,6 +24,7 @@ function MessageScree(props) {
       title={item.title}
       subtitle={item.description}
       image={require("../assets/image/asdasd.png")}
+      onPress={() => console.log("Message click ", item)}
     />
   );
 
@@ -32,6 +34,7 @@ function MessageScree(props) {
         data={messages}
         keyExtractor={(messages) => messages.id.toString()}
         renderItem={renderItem}
+        ItemSeparatorComponent={Seperator}
       />
     </Screen>
   );

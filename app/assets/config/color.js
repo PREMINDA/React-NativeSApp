@@ -5,4 +5,5 @@ export default {
   titletext: "#08c2af",
   white: "#fff",
   mediumgray: "#6e6969",
+  light: "#f8f4f4",
 };
