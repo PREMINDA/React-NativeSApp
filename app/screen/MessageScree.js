@@ -1,6 +1,7 @@
 import React from "react";
 import { FlatList, StyleSheet } from "react-native";
 import Listitem from "../components/Listitem/Listitem";
+import ListItemdelete from "../components/ListItemDelete/ListItemdelete";
 import Screen from "../components/ScreenComponent/Screen";
 import Seperator from "../components/Seperator/Seperator";
 const messages = [
@@ -25,6 +26,7 @@ function MessageScree(props) {
       subtitle={item.description}
       image={require("../assets/image/asdasd.png")}
       onPress={() => console.log("Message click ", item)}
+      renderRightActions={ListItemdelete}
     />
   );
 
