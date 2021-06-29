@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
   textcontainer: {
     marginTop: 5,
     marginLeft: 10,
+    justifyContent: "center",
   },
   name: {
     fontSize: 18,

@@ -8,19 +8,12 @@ import MessageScree from "./app/screen/MessageScree";
 
 import Moredetail from "./app/screen/Moredetail";
 import ViewImageScreen from "./app/screen/ViewImageScreen";
-import WelcomeScreen from "./app/screen/WelcomeScreen";
+import AccountScreen from "./app/screen/AccountScreen";
 
 import shopdata from "./data.js";
 
 export default function App() {
-  return (
-    <View>
-      <Listitem
-        title={"My Title"}
-        IconComponetnt={<Icon name="email"></Icon>}
-      />
-    </View>
-  );
+  return <AccountScreen />;
 }
 
 const styles = StyleSheet.create({
