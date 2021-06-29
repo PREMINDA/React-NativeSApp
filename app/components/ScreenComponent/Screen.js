@@ -9,6 +9,7 @@ function Screen(props) {
 const styles = StyleSheet.create({
   area: {
     paddingTop: Constants.statusBarHeight,
+    flex: 1,
   },
 });
 

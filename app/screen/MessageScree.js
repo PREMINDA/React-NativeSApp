@@ -21,6 +21,7 @@ const initialMessages = [
 
 function MessageScree(props) {
   const [messages, setMessages] = useState(initialMessages);
+  const [refreshing, setRefresing] = useState(false);
 
   const handleDelete = (message) => {
     const newMessage = messages.filter((m) => m.id !== message.id);
@@ -46,6 +47,17 @@ function MessageScree(props) {
         keyExtractor={(messages) => messages.id.toString()}
         renderItem={renderItem}
         ItemSeparatorComponent={Seperator}
+        refreshing={refreshing}
+        onRefresh={() => {
+          setMessages([
+            {
+              id: 2,
+              title: "t2",
+              description: "d2",
+              image: require("../assets/image/asdasd.png"),
+            },
+          ]);
+        }}
       />
     </Screen>
   );
