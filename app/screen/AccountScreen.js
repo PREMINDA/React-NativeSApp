@@ -4,6 +4,7 @@ import Listitem from "../components/Listitem/Listitem";
 import Screen from "../components/ScreenComponent/Screen";
 import color from "../assets/config/color";
 import Icon from "../components/Icon/Icon";
+import Seperator from "../components/Seperator/Seperator";
 
 const listdata = [
   {
@@ -34,6 +35,7 @@ function AccountScreen(props) {
       <View style={styles.container}>
         <FlatList
           data={listdata}
+          ItemSeparatorComponent={Seperator}
           keyExtractor={(listdata) => listdata.title}
           renderItem={({ item }) => (
             <Listitem
@@ -48,6 +50,10 @@ function AccountScreen(props) {
           )}
         />
       </View>
+      <Listitem
+        title="Log Out"
+        IconComponetnt={<Icon name="logout" bgcolor="#ffe66d" />}
+      />
     </Screen>
   );
 }

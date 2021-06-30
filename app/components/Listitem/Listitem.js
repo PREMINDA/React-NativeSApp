@@ -31,11 +31,12 @@ function Listitem({
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "transparent",
-    width: "90%",
+    borderWidth: 0,
     display: "flex",
     flexDirection: "row",
     padding: 15,
-    borderRadius: 16,
+
+    backgroundColor: color.white,
   },
 
   image: {
