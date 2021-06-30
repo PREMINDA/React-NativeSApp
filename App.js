@@ -9,11 +9,12 @@ import MessageScree from "./app/screen/MessageScree";
 import Moredetail from "./app/screen/Moredetail";
 import ViewImageScreen from "./app/screen/ViewImageScreen";
 import AccountScreen from "./app/screen/AccountScreen";
+import ListingScreen from "./app/screen/ListingScreen";
 
 import shopdata from "./data.js";
 
 export default function App() {
-  return <AccountScreen />;
+  return <ListingScreen />;
 }
 
 const styles = StyleSheet.create({
