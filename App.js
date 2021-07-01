@@ -1,10 +1,14 @@
 import { StatusBar } from "expo-status-bar";
-import React from "react";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import React, { useState } from "react";
+import { StyleSheet, Text, View, SafeAreaView, TextInput } from "react-native";
 import Card from "./app/components/Card/Card";
 import Icon from "./app/components/Icon/Icon";
 import Listitem from "./app/components/Listitem/Listitem";
 import MessageScree from "./app/screen/MessageScree";
+
+import Screen from "./app/components/ScreenComponent/Screen";
+
+import color from "./app/assets/config/color";
 
 import Moredetail from "./app/screen/Moredetail";
 import ViewImageScreen from "./app/screen/ViewImageScreen";
@@ -12,9 +16,13 @@ import AccountScreen from "./app/screen/AccountScreen";
 import ListingScreen from "./app/screen/ListingScreen";
 
 import shopdata from "./data.js";
+import AppText from "./app/components/AppText/AppText";
+import AppTextInput from "./app/components/AppTextInput/AppTextInput";
 
 export default function App() {
-  return <ListingScreen />;
+  const [typeText, settypeText] = useState("");
+
+  return <AppTextInput icon={"email"} placeholder="User Name" />;
 }
 
 const styles = StyleSheet.create({
